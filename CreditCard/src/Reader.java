@@ -7,16 +7,29 @@ import java.util.Scanner;
 
 public class Reader
 	{
-		static ArrayList <CardArrayList>cardList = new ArrayList<CardArrayList>();
+		 static ArrayList <Cards>cardList = new ArrayList <Cards>();
 		public static void main(String[] args) throws FileNotFoundException
 			{
-				// TODO Auto-generated method stub
-
+				readtxt();
+			    
 				
 			}
 		public static void readtxt()
 		{
+			
+			try
+				{
 			 Scanner myFile = new Scanner(new File("CreditCardNumbers.txt"));
-			cardList.add(new CardArrayList.Card(Integer.parseInt(myFile.next())));
+			 while(myFile.hasNext())
+			 {
+				cardList.add(new Cards(Integer.parseInt(myFile.next())));
+			 }
+				} catch (FileNotFoundException e)
+			{
+			
+				e.printStackTrace();
+			}
 		}
+
+		
 	}
