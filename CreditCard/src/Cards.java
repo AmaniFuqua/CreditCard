@@ -1,16 +1,16 @@
 
 public class Cards {
-	private int number;
+	private double number;
 	
-	public Cards (int n)
+	public Cards (double n)
 	{
 		number = n;
 	}
-	public int getNumber()
+	public double getNumber()
 		{
 			return number;
 		}
-	public void setNumber(int number)
+	public void setNumber(double number)
 		{
 			this.number = number;
 		}
